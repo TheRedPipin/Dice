@@ -1,0 +1,72 @@
+#targetText {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#mainContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#mainRange {
+    width: 70vh;
+    margin: 0 auto;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 8px;
+    background: linear-gradient(to right, green 0%, green calc(var(--value) - 0.1%), red calc(var(--value) + 0.1%), red 100%);
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #d8ecee;
+    cursor: pointer;
+    border-radius: 30%;
+}
+
+#arrow {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    display: none;
+}
+
+#mainButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#mainResult {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #000;
+    width: 100px;
+}
